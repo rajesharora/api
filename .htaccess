@@ -1,0 +1,19 @@
+# Turn rewrite engine on
+Options +FollowSymlinks
+RewriteEngine On
+RewriteBase /api
+
+# map neat URL to internal URL
+RewriteRule ^rest/linkinfo$    questionnaire/app/rest/linkinfo.php [L]   
+RewriteRule ^rest/updateuserstatus questionnaire/app/rest/updateuserstatus.php [L]
+RewriteRule ^rest/introvideo   questionnaire/app/rest/introvideo.php [L]
+RewriteRule ^rest/instructionvideo questionnaire/app/rest/instructionvideo.php [L]
+RewriteRule ^rest/instructions questionnaire/app/rest/instructions.php [L]
+RewriteRule ^rest/personalityquestions    questionnaire/app/rest/personalityquestions.php [L]
+RewriteRule ^rest/cognitivequestions    questionnaire/app/rest/cognitivequestions.php [L]
+
+RewriteRule ^questionnaire/config$    questionnaire/config/config.php [L]
+RewriteRule ^questionnaire/ConfifController$    questionnaire/config/ConfifController.php [L]
+RewriteRule ^questionnaire/insertpersonalityanswers$  questionnaire/app/controllers/questionnaire/insertpersonalityanswers.php [L]
+RewriteRule ^questionnaire/insertcognitiveanswers$  questionnaire/app/controllers/questionnaire/insertcognitiveanswers.php [L]
+RewriteRule ^questionnaireassignment/updatestartdate questionnaire/app/controllers/questionnaireassignment/updatestartdate.php [L]

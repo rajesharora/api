@@ -1,0 +1,7 @@
+# Turn rewrite engine on
+Options +FollowSymlinks
+RewriteEngine On
+RewriteBase /api 
+
+# map neat URL to internal URL
+RewriteRule ^ques/user/userinfo$   questionnaire/app/controllers/users/userinfo.php [L]

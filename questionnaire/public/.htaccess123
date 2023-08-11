@@ -1,0 +1,16 @@
+# Turn rewrite engine on
+Options +FollowSymlinks
+RewriteEngine On
+RewriteBase /api 
+
+# map neat URL to internal URL
+RewriteRule ^users/userinfo$    /questionnaire/app/controllers/users/userinfo.php [L]   
+RewriteRule ^users/updateuserstatus /questionnaire/app/controllers/users/updateuserstatus.php [L]
+RewriteRule ^questionnaire/introvideo   /questionnaire/app/controllers/questionnaire/introvideo.php [L]
+RewriteRule ^questionnaire/instructionvideo /questionnaire/app/controllers/questionnaire/instructionvideo.php [L]
+RewriteRule ^questionnaire/instructions /questionnaire/app/controllers/questionnaire/instructions.php [L]
+RewriteRule ^questionnaire/questions    /questionnaire/app/controllers/questionnaire/questions.php [L]
+RewriteRule ^questionnaire/questions    /questionnaire/app/controllers/questionnaire/personalityoptions.php [L]
+
+<!-- RewriteRule ^questions/list/([0-9]+)$   questionJson.php?noofquestion=$1 [L]
+RewriteRule ^questions/list$   questionJson.php [L] -->
